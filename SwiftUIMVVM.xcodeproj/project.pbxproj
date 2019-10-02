@@ -15,6 +15,7 @@
 		C84BF75D234460A3001DE206 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84BF75B234460A3001DE206 /* LaunchScreen.storyboard */; };
 		C84BF768234460A4001DE206 /* SwiftUIMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84BF767234460A4001DE206 /* SwiftUIMVVMTests.swift */; };
 		C84BF773234462C2001DE206 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84BF772234462C2001DE206 /* Dog.swift */; };
+		C84BF77823446D0E001DE206 /* DogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84BF77723446D0E001DE206 /* DogListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		C84BF767234460A4001DE206 /* SwiftUIMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMVVMTests.swift; sourceTree = "<group>"; };
 		C84BF769234460A4001DE206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C84BF772234462C2001DE206 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		C84BF77723446D0E001DE206 /* DogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				C84BF754234460A1001DE206 /* DogListView.swift */,
+				C84BF77723446D0E001DE206 /* DogListViewModel.swift */,
 			);
 			path = DogList;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				C84BF753234460A1001DE206 /* SceneDelegate.swift in Sources */,
 				C84BF773234462C2001DE206 /* Dog.swift in Sources */,
 				C84BF755234460A1001DE206 /* DogListView.swift in Sources */,
+				C84BF77823446D0E001DE206 /* DogListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

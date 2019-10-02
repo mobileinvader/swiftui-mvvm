@@ -9,15 +9,11 @@
 import SwiftUI
 
 struct DogListView: View {
-  var dogs: [Dog] = [
-    Dog(name: "Bulldog"),
-    Dog(name: "Beagle"),
-    Dog(name: "Poodle")
-  ]
+  @ObservedObject var dogListVM = DogListViewModel()
   
   var body: some View {
     NavigationView {
-      List(dogs) { dog in
+      List(dogListVM.dogs) { dog in
         HStack {
           Image(uiImage: UIImage(named: "dog")!)
           .resizable()
@@ -25,7 +21,7 @@ struct DogListView: View {
           .frame(width: 60, height: 60)
           .overlay(
               RoundedRectangle(cornerRadius: 60)
-                  .strokeBorder(style: StrokeStyle(lineWidth: 1))
+                .strokeBorder(style: StrokeStyle(lineWidth: 1))
                 .foregroundColor(Color.black))
           .cornerRadius(60)
           Text(dog.name)
