@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct Dog: Identifiable {
-  let id = UUID()
-  let name: String
+struct DogMessage: Codable {
+  let message: [String]
+  let status: String
 }

@@ -6,11 +6,22 @@
 //
 
 import Foundation
+import Combine
 
 class DogListViewModel: ObservableObject {
-  @Published var dogs: [Dog] = [
-    Dog(name: "Bulldog"),
-    Dog(name: "Beagle"),
-    Dog(name: "Poodle")
-  ]
+  let dogApiUrl = "https://dog.ceo/api/breeds/list/random/10"
+  private var task: AnyCancellable?
+  
+  @Published var dogs: [String] = ["Bulldog", "Beagle", "Poodle"]
+  
+  func fetchDogs() {
+    task = URLSession.shared.dataTaskPublisher(for: URL(string: dogApiUrl)!)
+      .map { $0.data }
+      .decode(type: DogMessage.self, decoder: JSONDecoder())
+      .map { $0.message }
+      .replaceError(with: [String]())
+      .eraseToAnyPublisher()
+      .receive(on: RunLoop.main)
+      .assign(to: \DogListViewModel.dogs, on: self)
+  }
 }
