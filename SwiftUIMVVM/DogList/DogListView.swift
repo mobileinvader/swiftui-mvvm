@@ -15,19 +15,11 @@ struct DogListView: View {
     NavigationView {
       List(dogListVM.dogs, id: \.self) { dog in
         HStack {
-          Image(uiImage: UIImage(named: "dog")!)
-            .resizable()
-            .scaledToFill()
-            .frame(width: 60, height: 60)
-            .overlay(
-              RoundedRectangle(cornerRadius: 60)
-                .strokeBorder(style: StrokeStyle(lineWidth: 1))
-                .foregroundColor(Color.black))
-            .cornerRadius(60)
+          DogImage()
           Text(dog)
         }
       }.navigationBarTitle("Dogs")
-        .navigationBarItems(trailing: Button(action: {
+       .navigationBarItems(trailing: Button(action: {
           self.dogListVM.fetchDogs()
         }, label: {
           Text("Refresh")
@@ -39,5 +31,19 @@ struct DogListView: View {
 struct DogListView_Previews: PreviewProvider {
   static var previews: some View {
     DogListView()
+  }
+}
+
+struct DogImage: View {
+  var body: some View {
+    Image(uiImage: UIImage(named: "dog")!)
+      .resizable()
+      .scaledToFill()
+      .frame(width: 60, height: 60)
+      .overlay(
+        RoundedRectangle(cornerRadius: 60)
+          .strokeBorder(style: StrokeStyle(lineWidth: 1))
+          .foregroundColor(Color.black))
+      .cornerRadius(60)
   }
 }
