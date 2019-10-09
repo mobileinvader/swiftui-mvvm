@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C826258D234CAA4800DCC88E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826258C234CAA4800DCC88E /* ImageDownloader.swift */; };
+		C81DF704234DA33F007D8E5A /* DogImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DF703234DA33F007D8E5A /* DogImageMessage.swift */; };
+		C826258D234CAA4800DCC88E /* DogImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826258C234CAA4800DCC88E /* DogImageViewModel.swift */; };
 		C84BF751234460A1001DE206 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84BF750234460A1001DE206 /* AppDelegate.swift */; };
 		C84BF753234460A1001DE206 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84BF752234460A1001DE206 /* SceneDelegate.swift */; };
 		C84BF755234460A1001DE206 /* DogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84BF754234460A1001DE206 /* DogListView.swift */; };
@@ -30,7 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C826258C234CAA4800DCC88E /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		C81DF703234DA33F007D8E5A /* DogImageMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageMessage.swift; sourceTree = "<group>"; };
+		C826258C234CAA4800DCC88E /* DogImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageViewModel.swift; sourceTree = "<group>"; };
 		C84BF74D234460A1001DE206 /* SwiftUIMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84BF750234460A1001DE206 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C84BF752234460A1001DE206 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,12 +66,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C826258B234CAA2700DCC88E /* Network */ = {
+		C81DF705234DA36D007D8E5A /* DogImage */ = {
 			isa = PBXGroup;
 			children = (
-				C826258C234CAA4800DCC88E /* ImageDownloader.swift */,
+				C826258C234CAA4800DCC88E /* DogImageViewModel.swift */,
 			);
-			path = Network;
+			path = DogImage;
 			sourceTree = "<group>";
 		};
 		C84BF744234460A1001DE206 = {
@@ -94,9 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				C84BF775234462D7001DE206 /* Application */,
-				C826258B234CAA2700DCC88E /* Network */,
 				C84BF774234462CA001DE206 /* Models */,
 				C84BF776234462F0001DE206 /* DogList */,
+				C81DF705234DA36D007D8E5A /* DogImage */,
 				C84BF756234460A3001DE206 /* Assets.xcassets */,
 				C84BF75B234460A3001DE206 /* LaunchScreen.storyboard */,
 				C84BF75E234460A3001DE206 /* Info.plist */,
@@ -125,6 +127,8 @@
 		C84BF774234462CA001DE206 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C84BF772234462C2001DE206 /* DogMessage.swift */,
+				C81DF703234DA33F007D8E5A /* DogImageMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,7 +145,6 @@
 		C84BF776234462F0001DE206 /* DogList */ = {
 			isa = PBXGroup;
 			children = (
-				C84BF772234462C2001DE206 /* DogMessage.swift */,
 				C84BF754234460A1001DE206 /* DogListView.swift */,
 				C84BF77723446D0E001DE206 /* DogListViewModel.swift */,
 			);
@@ -250,10 +253,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C84BF751234460A1001DE206 /* AppDelegate.swift in Sources */,
+				C81DF704234DA33F007D8E5A /* DogImageMessage.swift in Sources */,
 				C84BF753234460A1001DE206 /* SceneDelegate.swift in Sources */,
 				C84BF773234462C2001DE206 /* DogMessage.swift in Sources */,
 				C84BF755234460A1001DE206 /* DogListView.swift in Sources */,
-				C826258D234CAA4800DCC88E /* ImageDownloader.swift in Sources */,
+				C826258D234CAA4800DCC88E /* DogImageViewModel.swift in Sources */,
 				C84BF77823446D0E001DE206 /* DogListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

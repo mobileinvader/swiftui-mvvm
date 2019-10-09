@@ -12,7 +12,7 @@ class DogListViewModel: ObservableObject {
   let dogApiUrl = "https://dog.ceo/api/breeds/list/random/10"
   private var task: AnyCancellable?
   
-  @Published var dogs: [String] = ["Bulldog", "Beagle", "Poodle"]
+  @Published var dogs: [String] = ["bulldog", "beagle", "poodle"]
   
   func fetchDogs() {
     task = URLSession.shared.dataTaskPublisher(for: URL(string: dogApiUrl)!)

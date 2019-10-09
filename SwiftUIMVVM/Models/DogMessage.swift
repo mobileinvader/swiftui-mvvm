@@ -7,7 +7,11 @@
 //
 
 import Foundation
-import SwiftUI
+
+struct GenericDogMessage<T: Codable>: Codable {
+  let message: T
+  let status: String
+}
 
 struct DogMessage: Codable {
   let message: [String]
