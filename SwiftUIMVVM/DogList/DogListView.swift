@@ -33,25 +33,3 @@ struct DogListView_Previews: PreviewProvider {
     DogListView()
   }
 }
-
-struct DogImage: View {
-  @ObservedObject private var viewModel: DogImageViewModel
-  
-  init(breedName: String) {
-    viewModel = DogImageViewModel(breedName: breedName)
-  }
-  
-  var body: some View {
-    Image(uiImage: (viewModel.imageData.count == 0) ? UIImage(named: "dog")!
-      : UIImage(data: viewModel.imageData)!)
-      .resizable()
-      .scaledToFill()
-      .frame(width: 60, height: 60)
-      .clipped()
-      .overlay(
-        RoundedRectangle(cornerRadius: 60)
-          .strokeBorder(style: StrokeStyle(lineWidth: 1))
-          .foregroundColor(Color.black))
-      .cornerRadius(60)
-  }
-}

@@ -15,9 +15,11 @@ class DogListViewModel: ObservableObject {
   @Published var dogs: [String] = ["bulldog", "beagle", "poodle"]
   
   func fetchDogs() {
-    task = URLSession.shared.dataTaskPublisher(for: URL(string: dogApiUrl)!)
+     guard let url = URL(string: dogApiUrl) else { return }
+    
+    task = URLSession.shared.dataTaskPublisher(for: url)
       .map { $0.data }
-      .decode(type: DogMessage.self, decoder: JSONDecoder())
+      .decode(type: DogMessage<[String]>.self, decoder: JSONDecoder())
       .map { $0.message }
       .replaceError(with: [String]())
       .eraseToAnyPublisher()

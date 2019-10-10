@@ -8,12 +8,7 @@
 
 import Foundation
 
-struct GenericDogMessage<T: Codable>: Codable {
+struct DogMessage<T: Codable>: Codable {
   let message: T
-  let status: String
-}
-
-struct DogMessage: Codable {
-  let message: [String]
   let status: String
 }

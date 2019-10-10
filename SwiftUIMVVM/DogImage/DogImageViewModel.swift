@@ -22,7 +22,7 @@ class DogImageViewModel: ObservableObject {
 
     firstTask = URLSession.shared.dataTaskPublisher(for: url)
     .map { $0.data }
-    .decode(type: DogImageMessage.self, decoder: JSONDecoder())
+    .decode(type: DogMessage<String>.self, decoder: JSONDecoder())
     .map { $0.message }
     .replaceError(with: String())
     .eraseToAnyPublisher()
