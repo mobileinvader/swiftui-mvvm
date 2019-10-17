@@ -18,6 +18,7 @@
 		C84BF773234462C2001DE206 /* DogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84BF772234462C2001DE206 /* DogMessage.swift */; };
 		C84BF77823446D0E001DE206 /* DogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84BF77723446D0E001DE206 /* DogListViewModel.swift */; };
 		C88AB460234EE8C600F10D45 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88AB45F234EE8C600F10D45 /* DogImage.swift */; };
+		C8B32EE32355B1CB00055E07 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8B32EE12355B1CB00055E07 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C84BF772234462C2001DE206 /* DogMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogMessage.swift; sourceTree = "<group>"; };
 		C84BF77723446D0E001DE206 /* DogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewModel.swift; sourceTree = "<group>"; };
 		C88AB45F234EE8C600F10D45 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
+		C8B32EE22355B1CB00055E07 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		C84BF74F234460A1001DE206 /* SwiftUIMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C8B32EE02355B1A900055E07 /* Database */,
 				C84BF775234462D7001DE206 /* Application */,
 				C84BF774234462CA001DE206 /* Models */,
 				C84BF776234462F0001DE206 /* DogList */,
@@ -149,6 +152,14 @@
 				C84BF77723446D0E001DE206 /* DogListViewModel.swift */,
 			);
 			path = DogList;
+			sourceTree = "<group>";
+		};
+		C8B32EE02355B1A900055E07 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				C8B32EE12355B1CB00055E07 /* Model.xcdatamodeld */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 				C84BF751234460A1001DE206 /* AppDelegate.swift in Sources */,
 				C84BF753234460A1001DE206 /* SceneDelegate.swift in Sources */,
 				C84BF773234462C2001DE206 /* DogMessage.swift in Sources */,
+				C8B32EE32355B1CB00055E07 /* Model.xcdatamodeld in Sources */,
 				C84BF755234460A1001DE206 /* DogListView.swift in Sources */,
 				C826258D234CAA4800DCC88E /* DogImageViewModel.swift in Sources */,
 				C88AB460234EE8C600F10D45 /* DogImage.swift in Sources */,
@@ -521,6 +533,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C8B32EE12355B1CB00055E07 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C8B32EE22355B1CB00055E07 /* Model.xcdatamodel */,
+			);
+			currentVersion = C8B32EE22355B1CB00055E07 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C84BF745234460A1001DE206 /* Project object */;
 }
